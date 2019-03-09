@@ -3,8 +3,7 @@ body {
   flex-direction: column;
   flex: auto;
   min-height: 100%;
-  max-width: 100%;
-  background-color: red;
+  width: 100%;
 }
 
 ul {
@@ -15,4 +14,12 @@ ul {
 
 * {
   box-sizing: border-box;
+}
+
+.app {
+  width: 90%;
+  margin: auto;
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 }

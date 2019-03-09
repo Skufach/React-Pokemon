@@ -1,25 +1,64 @@
 .pokemon-set {
   min-width: 300px;
-  max-width: 485px;
-  width: 30%;
-  margin: 5px;
+  max-width: 360px;
+  width: 32%;
+  margin: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  //padding: 20px;
+  min-height: 330px;
   background-color: #fff;
-  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+
   img {
     display: block;
-    width: 90%;
-    height: auto;
+    max-width: 280px;
+    max-height: 150px;
+    margin: auto;
   }
-  &_symbol {
-    width: 80px;
-    height: 80px;
-  }
-  &_logo {
 
+  &_logo {
+    height: 160px;
+    display: flex;
+    img {
+      align-items: center;
+    }
   }
+
+  &_title {
+    display: flex;
+    flex-direction: row;
+    //justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    &-text {
+      display: flex;
+      max-width: 75%;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &_symbol {
+    display: block;
+    width: 65px;
+    height: 65px;
+    //height: 100px;
+    padding: 5px;
+  }
+
+  &_list {
+    margin-left: -5%;
+    list-style: disc;
+
+    li {
+      padding: 2% 0;
+    }
+  }
+
+  h3, p {
+    margin: 5px 0;
+  }
+
 }
