@@ -1,0 +1,33 @@
+
+.set-container {
+  text-align: center;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  a {
+    position: relative;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 0;
+      background: linear-gradient(green, #7FFFD4);
+      left: 0;
+      bottom: 0;
+    }
+    &:hover {
+      color: darken(white, 20%);
+      &:before {
+        transition: 0.3s ease-in-out;
+        width: 100%;
+      }
+    }
+  }
+}

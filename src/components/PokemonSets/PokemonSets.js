@@ -15,11 +15,11 @@ export class PokemonSets extends React.Component {
             <Link to={`/${pokemon_set.code}`} className="pokemon-set">
 
                 <div className="pokemon-set_logo">
-                    <img src={`${pokemon_set.logoUrl}`} alt=""/>
+                    <img src={`${pokemon_set.logoUrl}`} alt={`${pokemon_set.name}`}/>
                 </div>
 
                 <div className="pokemon-set_title">
-                    <img className='pokemon-set_symbol' src={`${pokemon_set.symbolUrl}`} alt=""/>
+                    <img className='pokemon-set_symbol' src={`${pokemon_set.symbolUrl}`} alt={`${pokemon_set.name}`}/>
 
                     <div className="pokemon-set_title-text">
                         <h3>{pokemon_set.name}</h3>

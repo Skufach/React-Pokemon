@@ -4,7 +4,13 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  a:hover {
-    background-color: red;
+  a {
+    transition: all 0.5s ease;
+
+    &:hover {
+      background: linear-gradient(green, #7FFFD4);
+
+    }
   }
 }
+
