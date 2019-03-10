@@ -15,7 +15,9 @@ class SetsContainer extends Component {
         const sets = this.props.sets
 
         const set = Object.keys(sets).map(item=>
-            <PokemonSets pokemon_set={sets[item]}/>
+            <li key={sets[item].name} >
+                <PokemonSets pokemon_set={sets[item]}/>
+            </li>
         )
         return (
             <ul className='sets-container'>

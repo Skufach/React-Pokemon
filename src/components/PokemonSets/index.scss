@@ -2,14 +2,14 @@
   min-width: 300px;
   max-width: 360px;
   width: 32%;
-  margin: 10px;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   min-height: 330px;
   background-color: #fff;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 
   img {
     display: block;
@@ -60,5 +60,6 @@
   h3, p {
     margin: 5px 0;
   }
+
 
 }

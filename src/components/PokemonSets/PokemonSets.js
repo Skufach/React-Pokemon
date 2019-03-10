@@ -1,6 +1,8 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 
 import './index.scss'
+
 
 export class PokemonSets extends React.Component {
 
@@ -10,7 +12,7 @@ export class PokemonSets extends React.Component {
 
 
         return (
-            <li key={pokemon_set.id} className="pokemon-set">
+            <Link to={`/${pokemon_set.code}`} className="pokemon-set">
 
                 <div className="pokemon-set_logo">
                     <img src={`${pokemon_set.logoUrl}`} alt=""/>
@@ -34,7 +36,7 @@ export class PokemonSets extends React.Component {
                     </ul> : null
                 }
 
-            </li>
+            </Link>
         )
     }
 }

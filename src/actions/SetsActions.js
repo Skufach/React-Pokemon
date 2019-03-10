@@ -25,7 +25,6 @@ export function itemsFetchData(url) {
             .then(
                 data => {
                     dispatch(itemsFetchDataSuccess(data))
-                    // console.log(data.sets[1])
                 }
 
     )
