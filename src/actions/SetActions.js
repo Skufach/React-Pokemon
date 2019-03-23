@@ -8,11 +8,11 @@ export function itemsIsFetching() {
     };
 }
 
-export function itemsFetchDataSuccess(pokemon_set) {
+export function itemsFetchDataSuccess(cards) {
     return dispatch => {
         dispatch({
             type: GET_POKEMON_SET_SUCCESS,
-            payload: pokemon_set
+            payload: cards.cards
         })
     };
 }

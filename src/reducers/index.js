@@ -1,9 +1,10 @@
 import {combineReducers} from 'redux'
-import { setsReducer, setReducer} from './sets';
+import { setsReducer} from './setsReducer';
+import {setReducer} from './setReducer'
 
 export const rootReducer = combineReducers({
-    sets: setsReducer,
-    pokemon_set: setReducer
+    main: setsReducer,
+    set_page: setReducer
 });
 
 

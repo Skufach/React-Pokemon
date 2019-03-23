@@ -12,25 +12,25 @@ class SetsContainer extends Component {
     }
 
     render() {
-        const sets = this.props.sets
+        const sets = this.props.main.sets
+        const fetching = this.props.main.isFetching
 
-        const set = Object.keys(sets).map(item=>
-            <li key={sets[item].name} >
+        const set = Object.keys(sets).map(item =>
+            <li key={sets[item].name}>
                 <PokemonSets pokemon_set={sets[item]}/>
             </li>
         )
         return (
             <ul className='sets-container'>
-                {set}
+                {fetching ? <p>ЗАГРУЗКА...</p> : set}
             </ul>
-
         );
     }
 }
 
-const mapStateToProps = store => {
+const mapStateToProps = state => {
     return {
-        sets: store.sets
+        main: state.main
     }
 }
 

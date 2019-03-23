@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";
+import propTypes from 'prop-types'
 
 import './index.scss'
 
@@ -8,8 +9,9 @@ export class PokemonSets extends React.Component {
 
     render() {
         const {pokemon_set} = this.props
-        const middle_section = pokemon_set.standardLegal || pokemon_set.expandedLegal
 
+
+        const middle_section = pokemon_set.standardLegal || pokemon_set.expandedLegal
 
         return (
             <Link to={`/${pokemon_set.code}`} className="pokemon-set">
@@ -41,3 +43,6 @@ export class PokemonSets extends React.Component {
     }
 }
 
+PokemonSets.propTypes = {
+    pokemon_set: propTypes.object.isRequired,
+}

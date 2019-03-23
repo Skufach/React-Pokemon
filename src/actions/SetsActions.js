@@ -12,7 +12,7 @@ export function itemsFetchDataSuccess(sets) {
     return dispatch => {
         dispatch({
             type: GET_SETS_SUCCESS,
-            payload: sets
+            payload: sets.sets
         })
     };
 }
@@ -26,7 +26,6 @@ export function itemsFetchData(url) {
                 data => {
                     dispatch(itemsFetchDataSuccess(data))
                 }
-
-    )
+            )
     };
 }

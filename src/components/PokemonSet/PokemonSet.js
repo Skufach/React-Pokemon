@@ -1,6 +1,8 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 import './index.scss'
+
 
 
 export class PokemonSet extends React.Component {
@@ -16,3 +18,6 @@ export class PokemonSet extends React.Component {
     }
 }
 
+PokemonSet.propTypes = {
+    card : propTypes.object.isRequired
+}

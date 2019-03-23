@@ -14,7 +14,9 @@ class SetContainer extends Component {
     }
 
     render() {
-        const cards = this.props.pokemon_set
+        const cards = this.props.set_page.cards
+        const fetching = this.props.set_page.isFetching
+
         const card = Object.keys(cards).map(item =>
             <li key={cards[item].id}>
                 <PokemonSet card={cards[item]}/>
@@ -24,7 +26,7 @@ class SetContainer extends Component {
             <div className='set-container'>
                 <h3><Link to='/'>Главная</Link></h3>
                 <ul>
-                    {card}
+                    {fetching ? <p>ЗАГРУЗКА...</p> : card}
                 </ul>
             </div>
         );
@@ -32,10 +34,9 @@ class SetContainer extends Component {
 }
 
 
-const mapStateToProps = store => {
-    console.log(store)
+const mapStateToProps = state => {
     return {
-        pokemon_set: store.pokemon_set
+        set_page: state.set_page
 
     }
 }
