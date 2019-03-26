@@ -43,6 +43,8 @@ export class PokemonSets extends React.Component {
     }
 }
 
+
+
 PokemonSets.propTypes = {
     pokemon_set: propTypes.object.isRequired,
 }

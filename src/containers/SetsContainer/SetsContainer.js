@@ -7,6 +7,7 @@ import './index.scss'
 
 class SetsContainer extends Component {
 
+
     componentDidMount() {
         this.props.fetchData('https://api.pokemontcg.io/v1/sets')
     }
